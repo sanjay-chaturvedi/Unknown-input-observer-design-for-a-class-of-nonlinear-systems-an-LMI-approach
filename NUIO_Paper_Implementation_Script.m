@@ -4,7 +4,7 @@
 % ACC 2006, Weitian Chen and Mehrdad Saif
 % 
 % NOTE: This simulation files gives the values which gives correct simulation results. I have solved the LMI using 
-% the MATLAB's inbuilt LMI solver. The values given in paper do not give the results as presented in the paper.
+% the MATLAB's inbuilt LMI solver.
 
 % xdot = Ax + Bu + f(x) + Dv, y = cx ; u is input, v is disturbance, f(x) is nonlinear part, y is output
 % zdot = Nz + Ly + Mf(xhat), xhat = z - Ey ; 
@@ -83,4 +83,5 @@ scopes = find_system(model, 'BlockType', 'Scope');
 for i = 1:length(scopes)
     set_param(scopes{i}, 'Open', 'on');
 end
+
 
